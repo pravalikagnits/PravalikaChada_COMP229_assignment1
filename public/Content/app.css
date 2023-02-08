@@ -1,0 +1,98 @@
+/* File name - app.css
+Student name - Pravalika Chada
+Student Id - 301291332
+Date - 06/02/2023 */
+
+.navbar-nav {
+  padding-left: 20px;
+}
+
+.navbar-nav>li {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+#logo {
+  padding-left: 10px;
+}
+
+#homeScreen {
+  width: 100%;
+  height: 100%;
+}
+
+
+.main-screen {
+  background-image: url("../Assets/images/bg.png");
+  height: 700px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.font-italics {
+  font-style: italic !important;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 25px;
+}
+
+#skill_list {
+  margin: 0;
+}
+
+.padding-left-30 {
+  padding-left: 30px;
+}
+
+/* css - Reference Bootstrap */
+.card {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+  transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+
+.solid-line {
+  border: 1px solid white;
+}
+
+.services-icons {
+  display: inline-block;
+  font-size: 80px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.services-card {
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 20%;
+}
+
+.contact-screen {
+  background-image: url("../Assets/images/contact.jpg");
+  height: 600px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.padding-top-10px {
+  padding-top: 10px;
+}
+
+.padding-left100px {
+  padding-left: 100px;
+}
+
+.margin0 {
+  margin: 0px !important;
+}

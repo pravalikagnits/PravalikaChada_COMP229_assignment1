@@ -1,0 +1,94 @@
+<%-include partials/header.ejs%>
+    <%-include partials/main_nav.ejs%>
+        <!-- Contact section -->
+        <div class=" contact-screen">
+            <div class="row  container padding-left100px">
+                <div class="text-white col-md-6">
+                    <h3>GET IN TOUCH!!</h3>
+                    <p>We'd love to hear from you, be sure we will reply asap.</p>
+                    <br />
+                    <form class="form" method="POST">
+                        <div class="form group">
+                            <div class="row">
+                                <div class="col-md-4">First Name</div>
+                                <div class="col-md-4">Last Name</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input type="text" name="firstName" id="firstName" placeholder="First Name"
+                                        required="">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="lastName" id="lastName" placeholder="Last Name"
+                                        required="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form group">
+                            <div class="row">
+                                <div class="col-md-8 padding-top-10px">
+                                    Email Address
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="text" name="emailId" id="emailId" placeholder="Email" required=""
+                                        class="col-md-12">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form group">
+                            <div class="row">
+                                <div class="col-md-8 padding-top-10px">
+                                    Contact Number
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="text" name="contactNo" id="contactNo" placeholder="Phone Numer"
+                                        required="" class="col-md-12">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form group">
+                            <div class="row">
+                                <div class="col-md-8 padding-top-10px">
+                                    Message
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <textarea name="message" id="message" placeholder="Type Message"
+                                        rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-light" type="submit">Send Message</button>
+                    </form>
+
+                </div>
+                <div class="col-md-6">
+                    <!--  contact details.. -->
+                    <br/>
+                    <div id="contactDetailsCard col-md-4" class="card">
+                        <div class="card-body">
+                            <div>
+                                <i class="fa fa-map-marker"> 5 Plumbrook Crescent, ON, Canada.</i><br/>
+                                <i class="fa fa-phone"> +1 437 438 1190</i><br/>
+                                <i class="fa fa-envelope"> pchada@my.centennialcollege.ca</i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--<h1><%= title %></h1>-->
+        <!--<p>Welcome to <%= title %></p>-->
+        <!--Script section-->
+        <%-include partials/bottom_nav.ejs%>
+            <%-include partials/footer.ejs%>
