@@ -4,6 +4,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//modules for authentication
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
+
 // database setup
 let mongoose = require('mongoose');
 let DB = require('./db');
@@ -18,6 +25,7 @@ var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
 let booksRouter = require('../routes/book');
 let contactRouter = require('../routes/contact');
+let busContactRouter = require('../routes/businessContact');
 
 var app = express();
 
@@ -32,10 +40,33 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
+//setup express session.
+app.use(session({
+  secret: "SomeSecret",
+  saveUninitialized: false,
+  reSave: false
+}));
+
+//initialize flash to maintain the error msg.
+app.use(flash());
+
+//initialize passport.
+app.use(passport.initialize());
+app.use(passport.session());
+// passport user configuration
+//create a user model instance
+let userModel = require('../models/user');
+let User = userModel.User;
+passport.use(User.createStrategy());
+//serialize and deserialize the user info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
 app.use('/contact', contactRouter);
+app.use('/contactsList', busContactRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
